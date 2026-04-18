@@ -21,6 +21,11 @@
     );
   --background-color: #fff;
   --accent-color: #000;
+  --contour-color: #000;
+  --animation-fill-color: #f00;
+  --button-text-color: #fff;
+  --button-fill-color: #000;
+  --focus-shadow: 2px 2px 0 var(--accent-color);
   --label-stroke-color: #fff;
   --border-width: 2px;
   --section-offset: 100px;
