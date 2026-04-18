@@ -4,7 +4,6 @@
 ✦ like-icon — для svg-иконки анимированного сердца
 ✦ card__like-button — для кнопки Like рядом с иконкой
 ✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
 ✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
 ✦ button__text — для обозначения текстового элемента внутри кнопки
 
@@ -13,4 +12,284 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  margin: 0;
+  font-family: var(--main-font), sans-serif;
+  font-variation-settings: 'wght' var(--main-font-weight);
+  background-color: var(--background-color);
+  background-image: var(--page-background);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.content-section {
+  inline-size: var(--content-width);
+}
+
+.header {
+  display: grid;
+  justify-items: center;
+  gap: 20px;
+  margin: var(--section-offset) auto 0;
+  padding-block: var(--header-padding-block);
+  border: var(--border-width) solid var(--accent-color);
+  background-color: var(--background-color);
+}
+
+.header__logo {
+  color: var(--accent-color);
+  font-family: var(--accent-font), fantasy;
+  font-size: var(--header-logo-size);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.header__title {
+  font-family: var(--accent-font), fantasy;
+  font-size: var(--header-title-size);
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.main {
+  padding-block-end: var(--section-offset);
+}
+
+.cards {
+  display: grid;
+  gap: 50px;
+  margin: var(--section-offset) auto 0;
+}
+
+.card {
+  border: var(--border-width) solid var(--accent-color);
+  background-color: var(--background-color);
+}
+
+.card__title {
+  padding: var(--card-title-padding-block) var(--card-title-padding-inline);
+  font-size: var(--card-text-size);
+  line-height: 1.22;
+  font-variation-settings: 'wght' var(--title-font-weight);
+}
+
+.card__image-wrapper {
+  position: relative;
+  border-block: var(--border-width) solid var(--accent-color);
+}
+
+.card__image {
+  display: block;
+  inline-size: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.card__image-filter-0 {
+  filter: none;
+}
+
+.card__image-filter-1 {
+  filter: sepia(0.8);
+}
+
+.card__image-filter-2 {
+  filter: saturate(2.6);
+}
+
+.card__image-filter-3 {
+  filter: hue-rotate(20deg);
+}
+
+.card__image-filter-4 {
+  filter: hue-rotate(180deg) saturate(0.4) brightness(1.5);
+}
+
+.card__image-filter-5 {
+  filter: sepia(0.8) grayscale(0.3) brightness(1.1);
+}
+
+.card__image-filter-6 {
+  filter: blur(10px);
+}
+
+.card__image-filter-7 {
+  filter: blur(2px) hue-rotate(110deg) saturate(0.7);
+}
+
+.card__label {
+  position: absolute;
+  inset-block-start: var(--card-label-offset);
+  inset-inline-end: var(--card-label-offset);
+  opacity: 0.5;
+  font-family: var(--accent-font), fantasy;
+  font-size: var(--accent-text-size);
+  line-height: 1;
+  text-shadow:
+    -1px 0 var(--label-stroke-color),
+    0 1px var(--label-stroke-color),
+    1px 0 var(--label-stroke-color),
+    0 -1px var(--label-stroke-color);
+  mix-blend-mode: hard-light;
+}
+
+@supports (
+  (text-stroke: 1px var(--label-stroke-color)) or
+    (-webkit-text-stroke: 1px var(--label-stroke-color))
+) {
+  .card__label {
+    -webkit-text-stroke: 1px var(--label-stroke-color);
+    text-stroke: 1px var(--label-stroke-color);
+    text-shadow: none;
+  }
+}
+
+.card__content {
+  display: grid;
+  gap: var(--card-content-gap);
+  padding: var(--card-content-padding);
+}
+
+.card__text {
+  display: grid;
+  gap: var(--card-content-gap);
+  font-size: var(--card-text-size);
+  line-height: var(--card-line-height);
+}
+
+.card__buttons {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 6px;
+}
+
+.card__icon-button {
+  display: grid;
+  place-items: center;
+  inline-size: var(--icon-button-size);
+  block-size: var(--icon-button-size);
+  border: var(--border-width) solid transparent;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.like-icon {
+  display: block;
+}
+
+.button {
+  min-inline-size: min(100%, var(--button-width));
+  min-block-size: var(--button-height);
+  border: var(--border-width) solid var(--accent-color);
+  padding: 0;
+  background-color: var(--background-color);
+  cursor: pointer;
+}
+
+.card__like-button {
+  inline-size: var(--like-button-width);
+  min-inline-size: var(--like-button-width);
+  block-size: var(--button-height);
+  padding: 0;
+}
+
+.button__text {
+  font-family: var(--accent-font), fantasy;
+  font-size: var(--accent-text-size);
+  line-height: 0.9;
+}
+
+.save-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  inline-size: fit-content;
+  min-inline-size: 0;
+  min-block-size: 0;
+  margin: 0 auto;
+  padding: var(--save-button-padding);
+}
+
+.button__icon {
+  display: block;
+  flex-shrink: 0;
+  color: var(--accent-color);
+}
+
+.save-button .button__text {
+  white-space: nowrap;
+}
+
+.dialog {
+  display: none;
+  position: fixed;
+  inset: 0;
+  inline-size: min(var(--dialog-width), calc(100vw - 34px));
+  margin: auto;
+  padding: 30px;
+  border: var(--border-width) solid var(--accent-color);
+  background-color: var(--background-color);
+}
+
+.dialog[open] {
+  display: grid;
+  gap: 30px;
+}
+
+.dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.75);
+}
+
+.dialog__content {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 20px;
+}
+
+.dialog__icon {
+  display: block;
+  color: var(--accent-color);
+}
+
+.dialog__text {
+  font-family: var(--accent-font), fantasy;
+  font-size: var(--accent-text-size);
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.dialog__form {
+  display: grid;
+}
+
+.dialog__button {
+  justify-self: stretch;
+  padding-inline: 30px;
+}
+
+.dialog__button .button__text {
+  text-transform: uppercase;
+}
+
+@media (width <= 375px) {
+  .save-button {
+    flex-direction: column;
+  }
+
+  .save-button .button__icon {
+    display: block;
+    inline-size: 28px;
+    block-size: 28px;
+  }
+
+  .dialog {
+    padding-inline: 40px;
+  }
+
+  .dialog__content {
+    inline-size: 100%;
+  }
 }
