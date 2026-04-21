@@ -45,6 +45,7 @@
   --button-height: 38px;
   --like-button-width: 130px;
   --icon-button-size: 38px;
-  --save-button-padding: 20px;
+  --save-button-padding-block: 15px;
+  --save-button-padding-inline: 20px;
   --dialog-width: 353px;
 }

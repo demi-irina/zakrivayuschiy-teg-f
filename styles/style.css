@@ -65,8 +65,7 @@
 }
 
 .card__title {
-  padding: var(--card-title-padding-block, 4px)
-    var(--card-title-padding-inline, 10px);
+  padding: var(--card-title-padding-block, 4px) var(--card-title-padding-inline, 10px);
   font-size: var(--card-text-size, 18px);
   line-height: 1.22;
   font-variation-settings: 'wght' var(--title-font-weight, 715);
@@ -124,11 +123,10 @@
   font-family: var(--accent-font, 'PressStart2P'), fantasy;
   font-size: var(--accent-text-size, 14px);
   line-height: 1;
-  text-shadow:
-    -1px 0 var(--label-stroke-color, #fff),
-    0 1px var(--label-stroke-color, #fff),
-    1px 0 var(--label-stroke-color, #fff),
-    0 -1px var(--label-stroke-color, #fff);
+  text-shadow: -1px 0 var(--label-stroke-color, #fff),
+  0 1px var(--label-stroke-color, #fff),
+  1px 0 var(--label-stroke-color, #fff),
+  0 -1px var(--label-stroke-color, #fff);
   mix-blend-mode: hard-light;
 }
 
@@ -214,7 +212,7 @@
   min-inline-size: 0;
   min-block-size: 0;
   margin: 0 auto;
-  padding: var(--save-button-padding, 20px);
+  padding: var(--save-button-padding-block, 15px) var(--save-button-padding-inline, 20px);
 }
 
 .button__icon {
