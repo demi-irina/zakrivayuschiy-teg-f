@@ -84,35 +84,35 @@
   object-fit: cover;
 }
 
-.card__image-filter-0 {
+.card__image-filter-none {
   filter: none;
 }
 
-.card__image-filter-1 {
+.card__image-filter-sepia {
   filter: sepia(0.8);
 }
 
-.card__image-filter-2 {
+.card__image-filter-saturate {
   filter: saturate(2.6);
 }
 
-.card__image-filter-3 {
+.card__image-filter-hue-rotate {
   filter: hue-rotate(20deg);
 }
 
-.card__image-filter-4 {
+.card__image-filter-hue-saturate-brightness {
   filter: hue-rotate(180deg) saturate(0.4) brightness(1.5);
 }
 
-.card__image-filter-5 {
+.card__image-filter-sepia-grayscale-brightness {
   filter: sepia(0.8) grayscale(0.3) brightness(1.1);
 }
 
-.card__image-filter-6 {
+.card__image-filter-blur {
   filter: blur(10px);
 }
 
-.card__image-filter-7 {
+.card__image-filter-blur-hue-saturate {
   filter: blur(2px) hue-rotate(110deg) saturate(0.7);
 }
 
