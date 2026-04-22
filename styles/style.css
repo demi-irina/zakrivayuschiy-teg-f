@@ -227,9 +227,6 @@
 
 .dialog {
   display: none;
-  position: fixed;
-  inset: 0;
-  inline-size: min(var(--dialog-width, 353px), calc(100vw - 34px));
   margin: auto;
   padding: 30px;
   border: var(--border-width, 2px) solid var(--accent-color, #000);
@@ -238,6 +235,7 @@
 
 .dialog[open] {
   display: grid;
+  grid-template-columns: minmax(0, 293px);
   gap: 30px;
 }
 
@@ -289,10 +287,10 @@
   }
 
   .dialog {
-    padding-inline: 40px;
+    padding: 30px 40px;
   }
 
-  .dialog__content {
-    inline-size: 100%;
+  .dialog[open] {
+    grid-template-columns: minmax(0, 261px);
   }
 }
